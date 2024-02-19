@@ -37,7 +37,19 @@ for (const buttonSeat of allSeatButton) {
     totalPrice.innerText = totalTaka;
     const grandTaka = document.getElementById("grane_tk");
     grandTaka.innerText = totalTaka;
-    callFunction(totalTaka)
+    const btn = document.getElementById('apply-cupon');
+    btn.addEventListener('click',function(){
+      const inputValue = document.getElementById('input_element').value.toUpperCase();
+      const hiddenItem = document.getElementById('lavel_hidden')
+      hiddenItem.classList.add('hidden')
+      if(inputValue === 'COUPLE 20'){
+        const coupleDiscount = totalTaka*(20/100);
+        const totalDiscount = totalTaka - coupleDiscount;
+
+        const discountGrand = document.getElementById('grane_tk');
+        discountGrand.innerText = totalDiscount;
+      }
+    })
     if (count >= 4) {
       const totalButton = document.getElementsByClassName("btn_seat");
       for (const singleButton of totalButton) {
@@ -47,11 +59,6 @@ for (const buttonSeat of allSeatButton) {
     
   }); 
 }
-
-function callFunction(value){
-    console.log(value);
-}
-
 
  
 
