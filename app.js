@@ -42,12 +42,25 @@ for (const buttonSeat of allSeatButton) {
       const inputValue = document.getElementById('input_element').value.toUpperCase();
       const hiddenItem = document.getElementById('lavel_hidden')
       hiddenItem.classList.add('hidden')
+      const anotherHidden = document.getElementById('apply-cupon')
+      anotherHidden.classList.add('hidden')
       if(inputValue === 'COUPLE 20'){
         const coupleDiscount = totalTaka*(20/100);
         const totalDiscount = totalTaka - coupleDiscount;
 
         const discountGrand = document.getElementById('grane_tk');
         discountGrand.innerText = totalDiscount;
+      }
+      else if(inputValue === 'NEW15'){
+        const newDiscount = totalTaka*(15 / 100);
+        const newTotal = totalTaka - newDiscount;
+
+        const newGrand = document.getElementById('grane_tk')
+        newGrand.innerText = newTotal;
+
+      }
+      else{
+        alert("coupon IS WRONG!PLEASE CORRECT...");
       }
     })
     if (count >= 4) {
