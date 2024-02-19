@@ -60,7 +60,7 @@ for (const buttonSeat of allSeatButton) {
 
       }
       else{
-        alert("coupon IS WRONG!PLEASE CORRECT...");
+        alert("COUPON IS WRONG!PLEASE CORRECT...");
       }
     })
     if (count >= 4) {
