@@ -60,5 +60,13 @@ for (const buttonSeat of allSeatButton) {
   }); 
 }
 
+const nextOnly = document.getElementById('next_btn');
+nextOnly.addEventListener('click',function(){
+  const  lastSection = document.getElementById('first_section')
+  lastSection.classList.add('hidden');
+  const firstSection = document.getElementById('last_section')
+  firstSection.classList.remove('hidden')
+})
+
  
 
